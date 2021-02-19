@@ -20,7 +20,7 @@ class _Calculator extends State<Calculator> {
   };
   List _buttonList = ['더하기', '빼기', '곱하기', '나누기'];
   List<DropdownMenuItem<String>> _dropDownMenuItems = new List();
-  String _buttonText = '';
+  String _buttonText;
 
   @override
   void initState() {
