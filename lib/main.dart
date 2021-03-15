@@ -5,6 +5,9 @@ import 'tabbar.dart';
 import 'httpAPI.dart';
 import 'largeFileDown.dart';
 import 'todo.dart';
+import 'sharedpref.dart';
+import 'fileio.dart';
+import 'introPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Todo());
+        home: IntroPage());
   }
 }
 
@@ -35,22 +38,20 @@ class _MaterialFlutterApp extends State<MaterialFlutterApp> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Material Flutter App'),
+        actions: [
+          FlatButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => LargeFileDown()));
+            },
+            child: Text(
+              '로고 바꾸기',
+              style: TextStyle(color: Colors.white),
+            ),
+          )
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {},
-      ),
-      body: Container(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              Icon(Icons.android),
-              Text('android'),
-            ],
-            mainAxisAlignment: MainAxisAlignment.center,
-          ),
-        ),
-      ),
+      body: Container(),
     );
   }
 }

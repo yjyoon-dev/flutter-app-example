@@ -87,10 +87,10 @@ class _LargeFileDown extends State<LargeFileDown> {
     try {
       var dir = await getApplicationDocumentsDirectory();
       await dio
-          .download(_editingController.value.text, '${dir.path}/fromis_9.jpg',
+          .download(_editingController.value.text, '${dir.path}/myimage.jpg',
               onReceiveProgress: (rec, total) {
         print('Rec: $rec, Total:$total');
-        file = '${dir.path}/fromis_9.jpg';
+        file = '${dir.path}/myimage.jpg';
         setState(() {
           downloading = true;
           processString = ((rec / total) * 100).toStringAsFixed(0) + '%';

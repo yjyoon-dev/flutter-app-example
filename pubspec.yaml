@@ -27,6 +27,7 @@ dependencies:
   url_launcher: ^5.7.10
   dio: ^3.0.10
   path_provider: ^1.6.24
+  shared_preferences: 0.5.12
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -57,6 +58,7 @@ flutter:
     - image/cow.png
     - image/fox.png
     - image/pig.png
+    - repo/fruits.txt
     
   fonts:
     - family: Jost
