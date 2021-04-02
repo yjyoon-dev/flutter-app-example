@@ -8,6 +8,8 @@ import 'todo.dart';
 import 'sharedpref.dart';
 import 'fileio.dart';
 import 'introPage.dart';
+import 'nativeAPI.dart';
+import 'fbMemo.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: IntroPage());
+        home: FBMemo());
   }
 }
 
